@@ -1,0 +1,14 @@
+version: '3'
+services:
+  db_test:
+    # install postgres to write
+    # data into db
+    image: postgres:12
+    container_name: postgres_db_test
+    ports:
+     - 54320:5432
+    environment:
+         POSTGRES_PASSWORD: docker
+         POSTGRES_USER: admin
+         POSTGRES_DB: test_db
+    restart: always
